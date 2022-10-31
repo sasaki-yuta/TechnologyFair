@@ -1,0 +1,26 @@
+﻿<Window x:Class="work_wpf.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:work_wpf"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        
+        mc:Ignorable="d"
+        Title="作業時間記録" Height="600" Width="700">
+    <Grid Height="580">
+        <Label Content="ファイル" HorizontalAlignment="Left" Margin="28,24,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox_path" HorizontalAlignment="Left" Margin="77,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="493" Height="22"/>
+        <Button Content="参照" HorizontalAlignment="Left" Margin="575,29,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.025,-0.115" Click="Button_Click"/>
+        <Label Content="氏名" HorizontalAlignment="Left" Margin="28,64,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox_name" HorizontalAlignment="Left" Margin="77,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="215" Height="22"/>
+        <Button x:Name="btn_start" Content="開始" HorizontalAlignment="Left" Margin="575,67,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
+        <DatePicker x:Name="datepic" HorizontalAlignment="Left" Margin="77,105,0,0" VerticalAlignment="Top" Width="215" DisplayDate="2022-10-31" SelectedDate="{Binding Mode=OneTime, Source={x:Static System:DateTime.Today}}" />
+        <Label Content="日付" HorizontalAlignment="Left" Margin="28,105,0,0" VerticalAlignment="Top"/>
+        <Label Content="勤務表" HorizontalAlignment="Left" Margin="28,522,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textbox_kinm" HorizontalAlignment="Left" Margin="77,524,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="493" Height="22"/>
+        <Button x:Name="btn_kinm" Content="参照" HorizontalAlignment="Left" Margin="575,525,0,0" VerticalAlignment="Top" Click="btn_kinm_Click"/>
+        <Button Content="チェック" HorizontalAlignment="Left" Margin="608,525,0,0" VerticalAlignment="Top"/>
+        <DataGrid x:Name="data_grid" Margin="0,152,0,77" HorizontalAlignment="Center" Width="610"/>
+    </Grid>
+</Window>
